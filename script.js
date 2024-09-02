@@ -196,7 +196,7 @@ switch (weekDays) {
   default:
     console.log("its not a working day");
 }
-let sign = prompt("What's your age..?");
+// let sign = prompt("What's your age..?");
 // 18 -> 1000
 // 30 -> 3500
 // 44 -> 44000
@@ -214,3 +214,90 @@ function greeting(name) {
 
 // 2) Arrow Function
 // const addtion = () => {}
+
+const add = (a, b) => {
+  return a + b;
+};
+
+add(10, 20);
+console.log(add(10, 20));
+
+// ----------------------------- Array Methods ------------------------------------
+// map() creates a new array from calling a function for every array element.
+// map() does not execute the function for empty elements.
+// map() does not change the original array
+
+const arrayMap = [12, 10, 45, 56, 78, 98, 67, 15, 99];
+
+function double(item) {
+  return item * 2;
+}
+
+let resultDouble = arrayMap.map(double);
+console.log(resultDouble);
+
+let TripleResults = arrayMap.map((item) => item * 3);
+console.log(TripleResults);
+let EvenNumberResults = arrayMap.map((item) => item % 2 == 0);
+console.log(EvenNumberResults);
+
+// Filter : filter the array according to the given condition
+// filter() does not change the original array
+
+let evenNumberFilter = arrayMap.filter((item) => item % 2 == 0);
+console.log(evenNumberFilter);
+let evenNumberFilter1 = arrayMap.filter((item) => item % 2);
+console.log(evenNumberFilter1);
+
+// Reduce : find the sum of the array
+// reduce() does not change the original array
+
+let sumArray = arrayMap.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+
+console.log(sumArray);
+
+// Find : find the element according to the condition
+// find() does not change the original array
+// find() returns the first element that satisfies the condition
+
+let findArray = arrayMap.find((item) => item === 99);
+console.log(findArray);
+
+// Object : key : values {}
+let Human = {
+  name: "John",
+  age: 25,
+  school: "JPS",
+  college: "TISS",
+  address: "Pune",
+};
+
+// array inside objects
+let arrayObj = [
+  {
+    id: 1,
+    name: "John",
+    age: 25,
+    school: "JPS",
+    college: "TISS",
+    address: "Pune",
+  },
+  {
+    id: 2,
+    name: "John",
+    age: 25,
+    school: "JPS",
+    college: "TISS",
+    address: "Pune",
+  },
+  {
+    id: 3,
+    name: "John",
+    age: 25,
+    school: "JPS",
+    college: "TISS",
+    address: "Pune",
+  },
+];

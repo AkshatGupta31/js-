@@ -152,7 +152,7 @@ while (g <= 10) {
 // if else statement
 // ternary operator
 
-let family = [
+let family1 = [
   "Akshat Gupta",
   "paddu vansh",
   "Raj",
@@ -160,11 +160,11 @@ let family = [
   "Sagar Kumar",
   "Kashish",
 ];
-for (let h = 0; h < family.length; h++) {
-  if (family[h] === "Monjulika") {
+for (let h = 0; h < family1.length; h++) {
+  if (family1[h] === "Monjulika") {
     console.log("Aadha Gupta");
   } else {
-    console.log(family[h]);
+    console.log(family1[h]);
   }
 }
 
@@ -301,3 +301,75 @@ let arrayObj = [
     address: "Pune",
   },
 ];
+
+// intro to objects
+// access - dot vs bracket . vs []
+// add
+// iteration
+// deep copy vs shallow copy
+// concatination // add two or more obj in single obj
+
+// key:value
+// key is unique
+// key is string
+// cannot access the object through indexes
+
+const family = {
+  father: "Arun Gupta",
+  mother: "Nisha Gupta",
+  brother: "Akshat Gupta",
+  sister: "Aadhya Gupta",
+  "family tree": "Gupta family",
+};
+
+// access the obj
+console.log(family.brother);
+console.log(family.father);
+
+// add the key inside obj
+family.pet = "coco";
+console.log(family);
+
+// dot vs []  bracket notation
+// dot notation is faster
+// bracket notation is useful when key is dynamic
+
+console.log(family["pet"]);
+// console.log(family."family tree"); // wrong way
+// console.log(family["family tree"]);
+
+// iterate
+for (i in family) {
+  console.log(`${i} : ${family[i]}`);
+}
+
+const restaurant = {
+  id: "1",
+  name: "Pizza Hut",
+  address: "Pune",
+  "phone number": "1234567890",
+  rating: 4.5,
+};
+
+
+// clone a obj
+// deep clone / deep copy
+// spread operator : ...
+const cloneObj = {...family}
+// console.log(cloneObj);
+cloneObj.pc = "Dell"
+
+console.log(cloneObj);
+console.log(family);
+
+
+// shallow copy / fake copy
+const ben = family // refrence 
+ben.cpu = "motherboard"
+console.log(ben);
+console.log(family);
+
+
+// concar obj
+const newObj = {...family, ...restaurant}
+console.log(newObj);
